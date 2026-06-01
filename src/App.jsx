@@ -18,7 +18,7 @@ function FullScreenLoader() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-background">
       <div className="animate-pulse">
-        <Logo size={34} />
+        <Logo markSize={34} />
       </div>
     </div>
   );

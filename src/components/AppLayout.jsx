@@ -42,7 +42,7 @@ export function AppLayout() {
       <div className="flex min-w-0 flex-1 flex-col">
         {/* Mobile top bar */}
         <header className="flex h-16 items-center justify-between border-b border-border px-4 lg:hidden">
-          <Logo size={24} />
+          <Logo markSize={24} />
           <button
             onClick={() => setMobileOpen((v) => !v)}
             className="rounded-lg p-2 text-muted-foreground hover:bg-secondary hover:text-foreground"

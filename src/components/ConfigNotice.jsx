@@ -6,7 +6,7 @@ export function ConfigNotice() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-background bg-glow px-6">
       <div className="w-full max-w-md">
-        <Logo className="mb-8 justify-center" size={32} />
+        <Logo className="mb-8 justify-center" markSize={32} />
         <div className="rounded-xl border border-border bg-card p-7 shadow-2xl">
           <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-lg bg-brand/15 text-brand">
             <Database className="h-5 w-5" />

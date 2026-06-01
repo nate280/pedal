@@ -2,6 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Ronzino';
+  src: url('/Ronzino-Regular.woff2') format('woff2');
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'Ronzino';
+  src: url('/Ronzino-Medium.woff2') format('woff2');
+  font-weight: 500; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'Ronzino';
+  src: url('/Ronzino-Bold.woff2') format('woff2');
+  font-weight: 700; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'Ronzino';
+  src: url('/Ronzino-Oblique.woff2') format('woff2');
+  font-weight: 400; font-style: oblique; font-display: swap;
+}
+
 @layer base {
   :root {
     /* Pedal runs dark-first; these are the dark tokens. */
@@ -15,7 +36,7 @@
     --popover-foreground: 60 9% 96%;
 
     /* Electric yellow brand accent */
-    --brand: 71 100% 50%; /* ~#d6ff00 */
+    --brand: 66 100% 45%; /* #DAE600 */
     --brand-foreground: 0 0% 6%;
 
     --primary: 71 100% 50%;
@@ -65,8 +86,15 @@
 
 @layer utilities {
   .font-display {
-    font-family: "Space Grotesk", "Inter", sans-serif;
+    font-family: "Ronzino", "Space Grotesk", "Inter", sans-serif;
     letter-spacing: -0.01em;
+  }
+  .font-overline {
+    font-family: "Space Grotesk", "Inter", sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
   }
   /* Subtle grain / radial glow for the auth + empty screens */
   .bg-glow {

@@ -1,58 +1,34 @@
 import { cn } from "@/lib/utils";
 
-/** The Pedal mark — a stylised crankset that doubles as a "P". */
-export function PedalMark({ className, size = 28 }) {
+/** The real Pedal P mark from brand assets */
+export function PedalMark({ className, size = 28, variant = "electric" }) {
+  const fill = variant === "electric" ? "#DAE600" : "white";
+
   return (
     <svg
       width={size}
-      height={size}
-      viewBox="0 0 32 32"
+      viewBox="0 0 64 106"
       fill="none"
+      xmlns="http://www.w3.org/2000/svg"
       className={cn("shrink-0", className)}
       aria-hidden="true"
     >
-      <circle
-        cx="16"
-        cy="16"
-        r="6.5"
-        stroke="currentColor"
-        strokeWidth="2.4"
-      />
-      <circle cx="16" cy="16" r="1.8" fill="currentColor" />
-      {/* crank arm */}
-      <path
-        d="M16 16 L26 22"
-        stroke="currentColor"
-        strokeWidth="2.4"
-        strokeLinecap="round"
-      />
-      <rect
-        x="24.5"
-        y="20"
-        width="5"
-        height="5"
-        rx="1.4"
-        transform="rotate(31 27 22.5)"
-        fill="currentColor"
-      />
-      {/* spokes */}
-      <path
-        d="M16 9.5V6M16 26v-3.5M9.5 16H6M26 16h-3.5"
-        stroke="currentColor"
-        strokeWidth="2.2"
-        strokeLinecap="round"
-        opacity="0.55"
-      />
+      <path d="M0 0H33C50.1208 0 64 13.8792 64 31V31H0V0Z" fill={fill} />
+      <path d="M33 66V66C50.1208 66 64 52.1208 64 35V33H33V66Z" fill={fill} />
+      <path d="M0 52L31 33V86.5L0 106V52Z" fill={fill} />
     </svg>
   );
 }
 
-export function Logo({ className, markClassName, showWord = true, size = 28 }) {
+export function Logo({ className, markSize = 21, showWord = true, markVariant = "electric" }) {
   return (
     <div className={cn("flex items-center gap-2.5", className)}>
-      <PedalMark size={size} className={cn("text-brand", markClassName)} />
+      <PedalMark size={markSize} variant={markVariant} />
       {showWord && (
-        <span className="font-display text-xl font-bold tracking-tight text-foreground">
+        <span
+          className="font-display font-medium text-foreground"
+          style={{ fontSize: "1.15rem", letterSpacing: 0 }}
+        >
           Pedal
         </span>
       )}
