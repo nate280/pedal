@@ -11,7 +11,7 @@ export default {
     extend: {
       fontFamily: {
         sans: ["Ronzino", "Inter", "ui-sans-serif", "system-ui", "sans-serif"],
-        display: ["Ronzino", "Space Grotesk", "Inter", "sans-serif"],
+        display: ["Ronzino", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",

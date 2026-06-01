@@ -87,8 +87,8 @@
 
 @layer utilities {
   .font-display {
-    font-family: "Ronzino", "Space Grotesk", "Inter", sans-serif;
-    letter-spacing: 0;
+    font-family: "Ronzino", sans-serif;
+    letter-spacing: -0.01em;
   }
   .font-overline {
     font-family: "Space Grotesk", "Inter", sans-serif;
