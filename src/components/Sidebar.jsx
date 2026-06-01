@@ -39,7 +39,7 @@ export function Sidebar({ onNavigate }) {
   return (
     <div className="flex h-full flex-col bg-[#0c0c0c] border-r border-border">
       <div className="flex h-16 items-center px-5 border-b border-border">
-        <Logo markSize={26} />
+        <Logo markSize={20} />
       </div>
 
       <div className="px-3 py-4">

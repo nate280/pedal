@@ -20,7 +20,7 @@ export function PedalMark({ className, size = 28, variant = "electric" }) {
   );
 }
 
-export function Logo({ className, markSize = 21, showWord = true, markVariant = "electric" }) {
+export function Logo({ className, markSize = 20, showWord = true, markVariant = "electric" }) {
   return (
     <div className={cn("flex items-center gap-2.5", className)}>
       <PedalMark size={markSize} variant={markVariant} />

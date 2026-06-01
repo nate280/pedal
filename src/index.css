@@ -76,6 +76,7 @@
   }
   body {
     @apply bg-background text-foreground font-sans antialiased;
+    font-family: "Ronzino", "Inter", "ui-sans-serif", "system-ui", sans-serif;
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
   }
   /* Numeric data should be tabular for clean alignment */
@@ -87,7 +88,7 @@
 @layer utilities {
   .font-display {
     font-family: "Ronzino", "Space Grotesk", "Inter", sans-serif;
-    letter-spacing: -0.01em;
+    letter-spacing: 0;
   }
   .font-overline {
     font-family: "Space Grotesk", "Inter", sans-serif;
