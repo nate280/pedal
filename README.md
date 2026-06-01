@@ -37,15 +37,21 @@ Find them in the Supabase dashboard under **Settings → API**. Restart
 
 ### 2. Run the migration
 
-In the Supabase dashboard, open **SQL Editor** and run
-[`supabase/migrations/0001_init.sql`](supabase/migrations/0001_init.sql). It
-creates the schema, enum types, indexes, row-level-security policies, and the
-`issue-photos` storage bucket.
+In the Supabase dashboard, open **SQL Editor** and run the migrations in order:
+
+1. [`supabase/migrations/0001_init.sql`](supabase/migrations/0001_init.sql) —
+   schema, enum types, indexes, row-level-security policies, and the
+   `issue-photos` storage bucket.
+2. [`supabase/migrations/0002_rename_and_positions.sql`](supabase/migrations/0002_rename_and_positions.sql)
+   — only needed if you seeded **before** the "Bike NN" / numeric floor-position
+   conventions; it renames the studio to MOJO, renames bikes, converts floor
+   positions to numbers, and scales the fleet to 29 bikes. Idempotent.
 
 ### 3. (Optional) Seed demo data
 
-Run [`supabase/seed.sql`](supabase/seed.sql) for a populated demo studio
-(16 bikes, real issue history, notes) so the dashboard and fleet aren't empty.
+Run [`supabase/seed.sql`](supabase/seed.sql) for a populated demo studio —
+**MOJO Cycling Studio**, 29 bikes (floor positions 1–29), real issue history,
+and notes — so the dashboard and fleet aren't empty. Skip 0002 if you seed fresh.
 
 ### 4. Create an account
 
@@ -75,5 +81,6 @@ src/
   lib/               supabase client, constants, utils
 supabase/
   migrations/0001_init.sql
+  migrations/0002_rename_and_positions.sql
   seed.sql
 ```
