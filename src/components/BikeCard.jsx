@@ -31,7 +31,7 @@ export function BikeCard({ bike, index = 0 }) {
 
         <div className="flex items-start justify-between">
           <div className="min-w-0">
-            <h3 className="font-display text-base font-semibold text-foreground">
+            <h3 className="font-display text-base font-normal text-foreground">
               {bike.name}
             </h3>
             <div className="mt-1 flex items-center gap-1.5 text-xs text-muted-foreground">
