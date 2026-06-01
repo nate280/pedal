@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Pedal runs dark-first; these are the dark tokens. */
+    --background: 0 0% 6%; /* #0f0f0f */
+    --foreground: 60 9% 96%;
+
+    --card: 0 0% 8.5%; /* #161616 */
+    --card-foreground: 60 9% 96%;
+
+    --popover: 0 0% 9%;
+    --popover-foreground: 60 9% 96%;
+
+    /* Electric yellow brand accent */
+    --brand: 71 100% 50%; /* ~#d6ff00 */
+    --brand-foreground: 0 0% 6%;
+
+    --primary: 71 100% 50%;
+    --primary-foreground: 0 0% 6%;
+
+    --secondary: 0 0% 14%;
+    --secondary-foreground: 60 9% 96%;
+
+    --muted: 0 0% 14%;
+    --muted-foreground: 0 0% 60%;
+
+    --accent: 0 0% 16%;
+    --accent-foreground: 60 9% 96%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 60 9% 96%;
+
+    --border: 0 0% 16%;
+    --input: 0 0% 18%;
+    --ring: 71 100% 50%;
+
+    /* Status semantics */
+    --good: 142 71% 45%;
+    --warn: 38 95% 56%;
+    --danger: 0 84% 60%;
+
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    @apply bg-background;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+  /* Numeric data should be tabular for clean alignment */
+  .tabular {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: "Space Grotesk", "Inter", sans-serif;
+    letter-spacing: -0.01em;
+  }
+  /* Subtle grain / radial glow for the auth + empty screens */
+  .bg-glow {
+    background-image: radial-gradient(
+      60% 60% at 50% 0%,
+      hsl(var(--brand) / 0.08) 0%,
+      transparent 70%
+    );
+  }
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: hsl(0 0% 25%) transparent;
+  }
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background-color: hsl(0 0% 22%);
+    border-radius: 9999px;
+  }
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: transparent;
+  }
+}
+
+/* Recharts tooltip overrides to match the dark theme */
+.recharts-default-tooltip {
+  background-color: hsl(0 0% 10%) !important;
+  border: 1px solid hsl(var(--border)) !important;
+  border-radius: 0.5rem !important;
+}
+.recharts-cartesian-axis-tick-value {
+  fill: hsl(var(--muted-foreground));
+  font-size: 12px;
+}
