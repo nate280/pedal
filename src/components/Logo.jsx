@@ -26,8 +26,8 @@ export function Logo({ className, markSize = 18, showWord = true, markVariant = 
       <PedalMark size={markSize} variant={markVariant} />
       {showWord && (
         <span
-          className="font-display font-medium text-foreground"
-          style={{ fontSize: "1.35rem", letterSpacing: 0 }}
+          className="font-display text-foreground"
+          style={{ fontSize: "1.35rem", letterSpacing: 0, fontWeight: 500 }}
         >
           Pedal
         </span>
