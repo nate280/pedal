@@ -39,7 +39,14 @@ export function Sidebar({ onNavigate }) {
   return (
     <div className="flex h-full flex-col bg-[#0c0c0c] border-r border-border">
       <div className="flex h-16 items-center px-5 border-b border-border">
-        <Logo markSize={18} />
+        <Logo
+          markSize={18}
+          wordStyle={{
+            fontFamily: "'Instrument Serif', serif",
+            textTransform: "uppercase",
+            letterSpacing: "0.04em",
+          }}
+        />
       </div>
 
       <div className="px-3 py-4">

@@ -20,14 +20,14 @@ export function PedalMark({ className, size = 18, variant = "electric" }) {
   );
 }
 
-export function Logo({ className, markSize = 18, showWord = true, markVariant = "electric" }) {
+export function Logo({ className, markSize = 18, showWord = true, markVariant = "electric", wordStyle }) {
   return (
     <div className={cn("flex items-center gap-2.5", className)}>
       <PedalMark size={markSize} variant={markVariant} />
       {showWord && (
         <span
           className="font-display font-medium text-foreground"
-          style={{ fontSize: "1.35rem", letterSpacing: 0 }}
+          style={{ fontSize: "1.35rem", letterSpacing: 0, ...wordStyle }}
         >
           Pedal
         </span>
