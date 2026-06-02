@@ -7,6 +7,7 @@ import {
   Check,
   Loader2,
   RefreshCw,
+  CreditCard,
 } from "lucide-react";
 import { Page, PageHeader } from "@/components/PageHeader";
 import { Card } from "@/components/ui/card";
@@ -136,6 +137,28 @@ export default function Settings() {
               <LogOut className="h-4 w-4" />
               Sign out
             </Button>
+          </div>
+        </SectionCard>
+
+        {/* Billing */}
+        <SectionCard
+          icon={CreditCard}
+          title="Billing"
+          description="Manage your subscription and payment method."
+        >
+          <div className="flex items-center justify-between rounded-lg border border-border bg-background/40 px-4 py-3">
+            <div>
+              <p className="text-sm font-medium text-foreground">
+                Starter — $149/mo
+              </p>
+              <p className="text-xs text-muted-foreground">Current plan</p>
+            </div>
+            <div className="flex flex-col items-end gap-1">
+              <Button variant="outline" size="sm" disabled>
+                Manage billing
+              </Button>
+              <p className="text-xs text-muted-foreground">Coming soon</p>
+            </div>
           </div>
         </SectionCard>
 

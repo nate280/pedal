@@ -61,7 +61,7 @@ export default function Login() {
       >
         <div className="mb-8 flex flex-col items-center text-center">
           <Logo markSize={36} className="mb-5" />
-          <h1 className="font-display text-2xl font-bold tracking-tight text-foreground">
+          <h1 className="font-display text-[32px] leading-[1.1em] font-medium tracking-tight text-foreground">
             {mode === "signin" ? "Welcome back" : "Create your account"}
           </h1>
           <p className="mt-1.5 text-sm text-muted-foreground">

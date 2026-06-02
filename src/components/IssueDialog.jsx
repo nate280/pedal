@@ -286,7 +286,7 @@ export function IssueDialog({ issue: issueProp, open, onOpenChange }) {
             />
             <Button
               size="icon"
-              variant="secondary"
+              variant="outline"
               disabled={!note.trim() || savingNote}
               onClick={handleAddNote}
               className="h-[60px] w-11 shrink-0"

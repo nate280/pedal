@@ -118,7 +118,7 @@ export default function Dashboard() {
         title="Dashboard"
         description={`Fleet health for ${format(new Date(), "EEEE, MMM d")}.`}
       >
-        <Button asChild variant="outline">
+        <Button asChild variant="secondary">
           <Link to="/fleet">
             View fleet
             <ArrowUpRight className="h-4 w-4" />

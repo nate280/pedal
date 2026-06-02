@@ -237,7 +237,7 @@ export default function BikeDetail() {
               title="No issues logged"
               description="This bike has a clean record. Log an issue if something needs attention."
               action={
-                <Button asChild variant="outline">
+                <Button asChild>
                   <Link to={`/log?bike=${bike.id}`}>Log the first issue</Link>
                 </Button>
               }

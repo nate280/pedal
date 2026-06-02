@@ -11,7 +11,7 @@ export function ConfigNotice() {
           <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-lg bg-brand/15 text-brand">
             <Database className="h-5 w-5" />
           </div>
-          <h1 className="font-display text-xl font-bold text-foreground">
+          <h1 className="font-display text-[32px] leading-[1.1em] font-medium text-foreground">
             Connect Supabase
           </h1>
           <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
