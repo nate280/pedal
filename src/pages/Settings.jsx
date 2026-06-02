@@ -2,11 +2,9 @@ import { useState } from "react";
 import {
   Building2,
   User,
-  Database,
   LogOut,
   Check,
   Loader2,
-  RefreshCw,
   CreditCard,
 } from "lucide-react";
 import { Page, PageHeader } from "@/components/PageHeader";
@@ -26,7 +24,6 @@ export default function Settings() {
   const { toast } = useToast();
   const [studioName, setStudioName] = useState(studio?.name || "");
   const [saving, setSaving] = useState(false);
-  const [refreshing, setRefreshing] = useState(false);
 
   const saveStudio = async () => {
     if (!studio) return;
@@ -48,13 +45,6 @@ export default function Settings() {
     } finally {
       setSaving(false);
     }
-  };
-
-  const handleRefresh = async () => {
-    setRefreshing(true);
-    await reload();
-    setRefreshing(false);
-    toast({ variant: "success", title: "Data refreshed" });
   };
 
   return (
@@ -159,33 +149,6 @@ export default function Settings() {
               </Button>
               <p className="text-xs text-muted-foreground">Coming soon</p>
             </div>
-          </div>
-        </SectionCard>
-
-        {/* Data / connection */}
-        <SectionCard
-          icon={Database}
-          title="Data"
-          description="Connection to your Supabase backend."
-        >
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-2 text-sm">
-              <span className="flex h-2 w-2 rounded-full bg-good">
-                <span className="h-2 w-2 animate-ping rounded-full bg-good/70" />
-              </span>
-              <span className="text-foreground">Connected to Supabase</span>
-            </div>
-            <Button
-              variant="outline"
-              size="sm"
-              onClick={handleRefresh}
-              disabled={refreshing}
-            >
-              <RefreshCw
-                className={refreshing ? "h-4 w-4 animate-spin" : "h-4 w-4"}
-              />
-              Refresh
-            </Button>
           </div>
         </SectionCard>
       </div>
