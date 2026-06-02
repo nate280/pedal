@@ -123,7 +123,7 @@ export default function BikeDetail() {
         <div className={cn("h-1 w-full", cfg.dot)} />
         <div className="flex flex-col gap-5 p-6 sm:flex-row sm:items-start sm:justify-between">
           <div>
-            <h1 className="font-display text-3xl font-bold tracking-tight text-foreground">
+            <h1 className="font-display text-[32px] leading-[1.1em] font-medium tracking-tight text-foreground">
               {bike.name}
             </h1>
             <div className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-1.5 text-sm text-muted-foreground">

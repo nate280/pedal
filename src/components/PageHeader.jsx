@@ -9,7 +9,7 @@ export function PageHeader({ title, description, children, className }) {
       )}
     >
       <div className="space-y-1">
-        <h1 className="font-display text-2xl font-normal tracking-tight text-foreground sm:text-[28px]">
+        <h1 className="font-display text-[32px] leading-[1.1em] font-medium tracking-tight text-foreground">
           {title}
         </h1>
         {description && (
